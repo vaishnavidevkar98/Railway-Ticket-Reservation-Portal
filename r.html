@@ -1,0 +1,379 @@
+<html>
+<head>
+<style>
+input[type=button]{
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+<script language="Javascript" type="text/Javascript">
+
+
+function f11()
+{	var pre,pre1
+	with(window.document.forms.f1)
+	{
+
+	
+	var today=new Date()
+	var n=today.getDate()+1
+	var m=today.getMonth()
+	var l=today.getFullYear()
+	var hour=today.getHours()+2
+	var hour1=today.getHours()+4
+	var min=today.getMinutes()
+	var sec=today.getSeconds()
+	if(hour>=12)
+	{
+		pre='PM'
+	}
+	else
+	{
+		pre='AM'
+	}
+	if(hour1>=12)
+	{
+		hour=hour-12
+	}
+	if(hour1>=12)
+	{
+		pre1='PM'
+	}
+	else
+	{
+		pre1='AM'
+	}
+	if(hour1>=12)
+	{
+		hour1=hour1-12
+	}
+	
+	if(r1.value=="1234")
+	{	
+		t3.value=n+"/"+m+"/"+l
+		t1.value=hour+":"+min+":"+sec+":"+pre
+		t2.value=hour1+":"+min+":"+sec+":"+pre
+		t4.value=n+"/"+m+"/"+l
+		//alert(n)
+		//document.getElementById("t1").innerHTML=+s
+		
+		
+	}	
+}
+}
+function f13()
+{	var total=0
+	with(window.document.forms.f1)
+	{
+		
+		var l1=r1.value
+		var l2=p1.value
+		var l3=p2.value
+		var l4=p3.value
+		var l5=t1.value
+		var l6=t3.value
+		var l7=t2.value
+		var l8=t4.value
+		var l9=m1.value
+		var l10=p4.value
+		var l11=p9.value
+		var l12=k1.value
+		if(g3.checked==true)
+		{
+			var l13=g3.value
+			var l14=parseInt(l13)
+			total=total+l14
+		}
+		if(g4.checked==true)
+		{
+			var l15=g4.value
+			var l16=parseInt(l15)
+			total=total+l16
+		}
+		if(g1.checked==true)
+		{
+			var l17=g1.value
+			var l18=parseInt(l17)
+			total=total+l18
+		}
+		if(g2.checked==true)
+		{
+			var l19=g4.value
+			var l20=parseInt(l19)
+			total=total+l20
+		}
+		if(g5.checked==true)
+		{
+			var l20=g4.value
+			var l21=parseInt(l20)
+			total=total+l21
+		}
+		if(g6.checked==true)
+		{
+			var l22=g4.value
+			var l23=parseInt(l22)
+			total=total+l23
+		}
+		alert('Total amount is'+total)
+document.write("<h1><u><b><center>"+"Ticket"+"</center></b></u></h1>")
+		
+document.write("<table border='3px' align='center'>")
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Train PNR no:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l1)
+document.write("</td>")
+document.write("</tr>")
+
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Train Name:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l2)
+document.write("</td>")
+document.write("</tr>")
+		
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Source:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l3)
+document.write("</td>")
+document.write("</tr>")
+		
+
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Destination:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l4)
+document.write("</td>")
+document.write("</tr>")
+		
+
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Arrival Timing:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l5)
+document.write("</td>")
+document.write("</tr>")
+		
+
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Arrival Date:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l6)
+document.write("</td>")
+document.write("</tr>")
+		
+
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Depature Date:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l8)
+document.write("</td>")
+document.write("</tr>")
+		
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Depature Timing:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l7)
+document.write("</td>")
+document.write("</tr>")
+		
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Total amount is "+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(total)
+document.write("</td>")
+document.write("</tr>")
+
+
+document.write("<tr>")
+document.write("<td>")
+		document.write("<b>"+"Passenger Name:"+"<b>")
+document.write("</td>")
+document.write("<td>")
+		document.write(l9+"<br>"+l10+"<br>"+l11)
+document.write("</td>")
+document.write("</tr>")
+	document.write("</table>")
+document.write("<center><input type='button' value='Print' onclick='ok()'></center>")		
+
+
+		if(k1.value=="2")
+		{
+			alert('payment done by:Debit card')
+		}
+		if(k1.value=="3")
+		{
+			alert('payment done by:Credit  card')
+		}
+		//dcument.getElementById("e1").innerHTML=total
+		//window.document.cookie='train no is'+l1+';train name is'+l2+';source is '+l3+';destination is'+l4+';arrival time'+l5+';arrival date'+l6+';departure time'+l7+';departure date'+l8+';first user'+l9+';Second user'+l10+';Third user'+l11
+		window.document.cookie=total
+	}
+		
+			
+}
+
+function f14()
+{
+	alert(window.document.cookie)
+}
+function f16()
+{
+	
+	
+	alert(window.document.cookie)
+}
+function f17()
+{	
+	alert('ticket cancel'+window.document.cookie+'amount is sent to you returned')
+
+	var expiredate=new Date()
+	expiredate.setDate(expiredate.getDate()-1)
+	var cookievalue=document.getElementById("p1").value
+	document.cookie=cookievalue+";expires="+expiredate.toGMTString()
+	//document.cookie="expires"+expiredate.toGMTString()+";"
+	
+	//document.write("Setting cookie"+"name="+cookievalue)
+	
+	
+	
+	alert('cookie deleted')
+	
+	document.getElementById("l9").value=""
+	document.getElementById("l10").value=""
+	document.getElementById("l11").value=""
+	//document.getElementById("p4").value=""
+	//document.getElementById("p9").value=""
+	
+	
+	
+}
+	
+</script>
+</head>
+<body bgcolor="pink" onload="f16()">
+<form name="f1" >
+<table border=2>
+<tr>
+<td rowspan=2><h1>Train Number</h1></td>
+<td rowspan=2><h1>Train Name</h1></td>
+<td rowspan=2><h1>Source</h1></td>
+<td rowspan=2><h1>Destination</h1></td>
+<td rowspan=2><h1>Distance</h1></td>
+<td colspan=2><h1><center>Fare</h1></td>
+<td rowspan=2><h1>Seets</h1></td>
+<td colspan=2><h1><center>Time</center></h1></td>
+</tr>
+<tr>
+<td>First Class</td>
+<td>AC Chair Car</td>
+<td>Arrival</td>
+<td>Departure</td>
+</tr>
+<tr>
+<td><input type="radio" name="r1"  id="r1" value="1234" onclick="f11()"><br>1234</td>
+<td><input type="text" value="Rajdhani Express"readonly=true name="p1" id="p1"></td>
+<td><input type="text" value="Pune" readonly=true name="p2" id="p2"></td>
+<td><input type="text" value="Mumbai" readonly=true name="p3" id="p3"></td>
+<td>200km</td>
+<td>500Rs
+<td>1000Rs</td>
+<td><input type="text" value="3" readonly=true name="c1"></td>
+<td><input type="text" name="t1"  ><br><input type="text" name="t3" id="t3" ></td>
+<td><input type="text" name="t2" id="t2" ><br><input type="text" name="t4" id="t4" ></td>
+</tr>
+
+
+
+
+<tr><td>
+<h1><center>Passenger Details</h1></td>
+</tr>
+<tr><td>Sr.No</td>
+<td>Passenger Name</td>
+<td>Age</td>
+<td>Gender</td>
+<td>Seet type</td>
+</tr>
+<tr>
+<td>1</td>
+<td><input type="text" name="m1" id="m1"></td>
+<td><input type="text" name="m2" id="m2"></td>
+<td><input type="radio" name="m3" id="m3">Male<br><input type="radio" name="m3" id="m4">Female</td>
+<td><input type="checkbox" name="g5" id="g5" value="500">First Class<br><input type="checkbox" name="g6" id="g6" value="1000">AC Chair Car</td>
+
+</tr>
+<tr>
+<td>2</td>
+<td><input type="text" name="p4" id="p4"></td>
+<td><input type="text" name="p5" id="p5"></td>
+<td><input type="radio" name="p6" id="p6">Male<br><input type="radio" name="p6" id="p8">Female</td>
+<td><input type="checkbox" name="g1" id="g1" value="500">First Class<br><input type="checkbox" name="g2" id="g2" value="1000">AC Chair Car</td>
+
+</tr>
+<tr>
+<td>3</td>
+<td><input type="text" name="p9" id="p9"></td>
+<td><input type="text" name="p10" id="p10"></td>
+<td><input type="radio" name="p11" id="p11">Male<br><input type="radio" name="p11" id="p12">Female</td>
+<td><input type="checkbox" name="g3" id="g3" value="500">First Class<br><input type="checkbox" name="g4" id="g4" value="1000">AC Chair Car</td>
+</tr>
+<tr>
+<td> 
+Ttal amount is:
+</td>
+<td>
+<input type="text" name="e1" id="e1" >
+</td>
+</tr>
+<tr><td>
+Payment Mode</td>
+</tr><tr><td>
+<input type="radio" id="k1" name="k1" value="2">Debit Card</td></tr>
+<tr><td>
+<input type="radio" id="k2" name="k1" value="3">Credit Card<br></td></tr>
+
+<tr><td>
+
+<input type="button" value="submit" onclick="f13()">
+</td></tr>
+<tr><td>
+
+<input type="button" value="amount" onclick="f16()">
+</td></tr>
+<tr><td>
+
+<input type="button" value="Cancel" onclick="f17()">
+</td></tr>
+
+
+</table>
+</form>
+
+</body>
+</html>
+

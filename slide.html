@@ -1,0 +1,26 @@
+<html>
+<head>
+<Script language="Javascript" type="text/Javascript">
+function showslide()
+{
+var slide=new Array("2.jpg","3.jpg","1.jpg","4.jpg")
+s1=0
+
+{
+	s1=s1+0
+	if(s1>slide.length-1)
+	{
+		s1=0
+	}
+	if(s1<0)
+	{
+		s1=slide.length
+	}
+	document.display.src=slide[s1]
+}
+}
+</Script>
+</head>
+<body onload="showslide()">
+</body>
+</html>

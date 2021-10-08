@@ -1,0 +1,99 @@
+<html>
+<head>
+
+<script>
+var remainingAttempts = 3;
+
+function checkDetails()
+ {
+    var name = form1.txtusername.value;
+    var password = form1.txtpassword.value;
+   
+    var validUsername = validateUsername(name);
+    var validPassword = validatePassword(password);
+    if (validUsername && validPassword) 
+    {
+        alert('Login successful');
+       var mywindow=window.open("railbook.html","after login","location=1,toolbar=1,directories=1");
+        
+    }
+ else
+     {
+        form1.txtusername.value = '';
+        form1.txtpassword.value = '';
+        remainingAttempts--;
+
+        var msg = '';
+        if (validPassword)
+         {
+            msg += 'Username incorrect: ';
+        } 
+        else if (validUsername) 
+        {
+            msg += 'Password incorrect: ';
+        } 
+        else 
+        {
+            msg += 'Both username and password are incorrect: ';
+        }
+
+        msg += remainingAttempts + ' attempts left.';
+        alert(msg);
+
+        if (remainingAttempts <= 0) 
+        {
+            alert('Closing window...');
+           
+        }
+    }
+
+    return validUsername && validPassword;
+}
+
+function validateUsername(username) {
+    return username == 'admin';
+}
+
+function validatePassword(password) {
+    return password == 'admin';
+}
+
+function account()
+{
+window.open("railacc.html");
+} 
+</script>
+</head>
+<body bgcolor="GREY" >
+
+<font size="6" color="WHITE"><u>Sign Up</u></font>
+
+<form id="form1" name="form1" method="post" action="Home.html" onsubmit="return checkDetails();">
+<br>
+Username
+<input type="text" name="txtusername"  placeholder="Username" id="txtusername" class="info" required />
+<br>
+<br>
+Password
+
+
+    <input type="password" name="txtpassword" id="txtpassword" class="info" required/>
+       <br><br>  
+        <input type="checkbox" name="terms" value="terms" id="terms"/>Remember Me</label>
+  <br><br><br>
+        <label>
+        <input type="submit" name="Login" id="Login" value="Login" required/>
+        </label>
+        <label>
+        <input type="reset" name="Reset" id="Reset" value="Reset" />
+        </label>
+</div>
+<br>
+<br>
+<input type="button" value="Don't have an account?" onclick="account()"></a>
+
+
+</form>
+</body>
+
+

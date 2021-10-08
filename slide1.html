@@ -1,0 +1,25 @@
+<html>
+<head>
+<SCRIPT language="Javascript" type="text/Javascript">
+var slide=new Array('img1.jpeg','img2.jpeg','img3.jpeg','img4.jpeg','img6.jpeg','img5.jpeg')
+currentbanner=0
+function banner()
+{
+if(document.images)
+{
+	currentbanner++
+if(currentbanner==slide.length)
+{
+	currentbanner=0
+}
+	document.rotatebanner.src=slide[currentbanner]
+	setTimeout("banner()",1500)
+}
+}
+</SCRIPT>
+
+</head>
+<body onload="banner()" bgcolor="GREY">
+<img src="travel_HD.jpg" name="rotatebanner" heigth="2650" width="650">
+</body>
+</html>

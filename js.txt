@@ -1,0 +1,10 @@
+web page  protection
+document.captureEvents(Event.KEYDOWN)
+document.captureEvents(Event.MOUSEDOWN)
+document.onkeydown=new 
+document.onmousedown=new
+
+1. To display the status
+script.js-for hiding the code
+
+document.captureEvents for blocking mouse activity

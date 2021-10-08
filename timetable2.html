@@ -1,0 +1,177 @@
+<html>
+<head>
+<script language="Javascript" type="text/Javascript">
+function f11()
+{	var pre,pre1
+	with(window.document.forms.f1)
+	{
+
+	
+	var today=new Date()
+	var n=today.getDate()+1
+	var m=today.getMonth()
+	var l=today.getFullYear()
+	var hour=today.getHours()+2
+	var hour1=today.getHours()+4
+	var min=today.getMinutes()
+	var sec=today.getSeconds()
+	if(hour>=12)
+	{
+		pre='PM'
+	}
+	else
+	{
+		pre='AM'
+	}
+	if(hour1>=12)
+	{
+		hour=hour-12
+	}
+	if(hour1>=12)
+	{
+		pre1='PM'
+	}
+	else
+	{
+		pre1='AM'
+	}
+	if(hour1>=12)
+	{
+		hour1=hour1-12
+	}
+	
+	if(r1.value=="4")
+	{	
+		t3.value=n+"/"+m+"/"+l
+		t1.value=hour+":"+min+":"+sec+":"+pre
+		t2.value=hour1+":"+min+":"+sec+":"+pre
+		t4.value=n+"/"+m+"/"+l
+		//alert(n)
+		//document.getElementById("t1").innerHTML=+s
+		
+		
+	}	
+}
+}
+function f12()
+{	var pre2,pre3
+	with(window.document.forms.f1)
+	{
+
+	
+	var today=new Date()
+	var n=today.getDate()+2
+	var m=today.getMonth()
+	var l=today.getFullYear()
+	var hour2=today.getHours()+3
+	var hour3=today.getHours()+4
+	var min1=today.getMinutes()
+	var sec1=today.getSeconds()
+	if(hour2>=12)
+	{
+		pre2='PM'
+	}
+	else
+	{
+		pre2='AM'
+	}
+	if(hour2>=12)
+	{
+		hour2=hour2-12
+	}
+	if(hour2>=12)
+	{
+		pre3='PM'
+	}
+	else
+	{
+		pre3='AM'
+	}
+	if(hour3>=12)
+	{
+		hour3=hour3-12
+	}
+	
+	if(r1.value=="5")
+	{	
+		t6.value=n+"/"+m+"/"+l
+		t5.value=hour2+":"+min1+":"+sec1+":"+pre2
+		t7.value=hour3+":"+min1+":"+sec1+":"+pre3
+		t8.value=n+"/"+m+"/"+l
+		//alert(n)
+		//document.getElementById("t1").innerHTML=+s
+		
+		
+	}	
+}
+}
+function f13()
+{
+	with(window.document.forms.f1)
+	{
+	
+	if(r1.value=="4")
+	{
+		var mywindow1=window.open("reserve4.html","delhi","width=1000,height=500")
+	}
+	if(r1.value=="5")
+	{
+		var mywindow2=window.open("reserve5.html","delhi","width=1000,height=500")
+	}
+	}
+}
+
+</script>
+</head>
+<body>
+<form name="f1">
+<table border=2>
+<tr>
+<td rowspan=2><h1>Train Number</h1></td>
+<td rowspan=2><h1>Train Name</h1></td>
+<td rowspan=2><h1>Source</h1></td>
+<td rowspan=2><h1>Destination</h1></td>
+<td rowspan=2><h1>Distance</h1></td>
+<td colspan=2><h1><center>Fare</h1></td>
+<td colspan=2><h1><center>Time</center></h1></td>
+</tr>
+<tr>
+<td>First Class</td>
+<td>AC Chair Car</td>
+<td>Arrival</td>
+<td>Departure</td>
+</tr>
+<tr>
+<td><input type="radio" name="r1"  id="r1" value="4" onchange="f11()"><br>8181</td>
+<td>Rajdhani Express</td>
+<td>Mumbai</td>
+<td>Delhi</td>
+<td>700km</td>
+<td>500Rs</td>
+<td>1000Rs</td>
+<td><input type="text" name="t1" ><br><input type="text" name="t3" id="t3" ></td>
+<td><input type="text" name="t2" id="t2" ><br><input type="text" name="t4" id="t4" ></td>
+</tr>
+<tr>
+<td><input type="radio" name="r1" id="r1" value="5" onchange="f12()"><br>9191</td>
+<td>Delhi Express</td>
+<td>Mumbai</td>
+<td>Delhi</td>
+<td>700km</td>
+<td>500Rs</td>
+<td>1000Rs</td>
+<td><input type="text" name="t5"  id="t5"onchange="f12()"><br><input type="text" name="t6" id="t6"></td>
+<td><input type="text" name="t7" id="t7"><br><input type="text" name="t8" id="t8"></td>
+</tr>
+<tr>
+<td>
+
+<input type="button" value="Done" onclick="f13()">
+</td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
+

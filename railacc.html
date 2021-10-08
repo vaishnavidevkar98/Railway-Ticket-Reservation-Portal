@@ -1,0 +1,368 @@
+<HTML>
+<HEAD>
+<SCRIPT language="Javascript" type="text/Javascript">
+
+		
+	function valid1()
+	{
+		with(window.document.forms.f1)
+	{	
+		
+		var name=n1.value
+		var lname=n2.value
+		var address=n3.value
+		var adharn=n4.value
+		var dob=n5.value
+		var email=n6.value
+		var phone=n7.value
+		var pan=n8.value
+		var uid=n10.value
+		var pwd=n11.value
+		var conpwd=n12.value
+		var gen=gender1.value
+		if(name=="")
+		{	
+			alert('eneter first name')
+		}
+		else
+		{
+			var re=/[a-zA-Z]/
+			if(re.test(name))
+			{
+				//alert('valid')
+			}
+			else
+			{
+				alert(' name invalid')
+			}
+		}
+		
+			
+		
+		
+		if(lname=="")
+		{
+			alert('Enter second name')
+		}
+		else
+		{
+		
+
+			
+
+			var r=/[a-zA-Z]/
+			if(r.test(lname))
+			{
+				//alert('valid')
+			}
+			else
+			{
+				alert('last name invalid')
+			}
+		}
+		
+		if(address=="")
+		{
+			alert('Enter address')
+		}
+		else
+		{
+			var address=n3.value
+		
+			var r1=/(?:\w)(?:[-.]{3})/
+			if(r1.test(address))
+			{
+				//alert('valid')
+			}
+			else
+			{
+				alert('invalid adress')
+			}
+		}
+		
+		if(adharn=="")
+		{
+			alert('Enter adhar no')
+		}
+	
+		else
+		{
+			var r2=/\d{12}/
+			if(r2.test(adharn))
+			{
+				//alert('valid aadhar no')
+			}
+			else
+			{
+				alert('invalid aadhar no')
+			}
+		}
+			
+		
+		if(dob=="")
+		{
+			alert('enter date of birth')
+		}
+		else
+		{
+			var r3=/(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/(?:19|20\d{2})/
+			//var res=dob.match(r3)
+			
+			if(r3.test(dob))
+			{
+				//alert('valid date')
+			}
+			else
+			{
+				alert('invalid date')
+			}
+		}
+		
+		if(email=="")
+		{
+			alert('Enter email')
+		}
+		else
+		{	
+			
+			var r4=/[a-z0-9_]{3,25}@[a-z]{1,5}.[a-z]{3}/
+			if(r4.test(email))
+			{
+				//alert('valid email')
+			}
+			else
+			{
+				alert('not valid email')
+			}
+		}
+		
+		
+		
+			
+		if(phone=="")
+		{
+			alert('Enter phone no')
+		}
+		else
+		{
+			var r5=/^\+91([0-9]{10})$/
+			if(r5.test(phone))
+			{
+				//alert('valid phone number')
+			}
+			else
+			{
+				alert('invalid phone number')
+			}
+		}
+		
+		if(pan=="")
+		{
+			alert('Enter pan no')
+		}
+		else
+		{
+			var r6=/[A-Z]{5}[0-9]{4}[A-Z]{1}/
+			if(r6.test(pan))
+			{
+				//alert('valid pan')
+			}
+			else
+			{
+				alert('invalid pan')
+			}
+		}
+		
+		
+		
+		if(uid=="")
+		{
+			alert('Enter user id')
+		}
+		else
+		{
+			var r7=/[a-zA-Z0-9]{4}/
+			if(r7.test(uid))
+			{
+				//alert('valid userid')
+			}
+			else
+			{
+				alert('invalid userid')
+			}
+		}
+		
+		if(pwd=="")
+		{
+			alert('Enter password')
+		}
+		else
+		{
+			var r8=/(?:[a-zA-Z0-9]{7,15})(?:@{1}|.{1})/
+			if(r8.test(pwd))
+			{
+				alert('valid password')
+			}
+			else
+			{
+				alert('invalid password')
+			}
+		}
+		
+		if(conpwd=="")
+		{
+			alert('Enter confirm password')
+		}
+		else
+		{
+			if(conpwd==pwd)
+			{
+				alert('valid password confirm')
+			}
+			else
+			{
+				alert('invalid password confirm')
+			}
+		}
+
+		
+		if((gender1.value=="1")||(gender1.value=="2")||(gender1.value=="3"))
+		{
+			alert('gender selected')
+		}
+		else
+		{
+			alert('gender is not selected')
+		}
+		
+	}
+		
+	
+}
+function f2()
+{
+	with(window.document.forms.f1)
+	{	
+		
+		if(n1.value.length>0&&n2.value.length>0&&n3.value.length>0&&n4.value.length>0&&n5.value.length>0&&n6.value.length>0&&n7.value.length>0&&n8.value.length>0&&n10.value.length>0&&n11.value.length>0&&n12.value.length>0)
+		{
+			
+			sub.disabled=false
+		}
+	}
+}
+
+</SCRIPT>
+		
+</HEAD>
+<BODY bgcolor="pink">
+<FORM name="f1">
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+
+ 
+
+          <tr>
+
+
+
+                    <td width="100" height="130" align="center" valign="middle"><img src="logo2.png" vspace="2" alt="Rail Logo" heigth="120" width="120"/></td>
+
+
+
+
+
+
+
+		   <td width="700" align="center" valign="center">
+
+
+
+			<p align="middle"><b><FONT color="#2473c7" size="7">INDIAN RAILWAYS  RESERVATION SYSTEM</font></FONT>
+
+</td>
+<td width="120" height="130" align="center" valign="right"><img src="logo3.jpeg" vspace="2" alt="Rail Logo" heigth="120" width="120"/></td></tr></table>
+<hr>
+<center><font color="black" size="6"><i><b>Personal Details</b></i> </font></center>
+<table align="center">
+<tr>
+<td align="left">First Name:</td>
+<td align="left"><input type="text" size="20" name="n1" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Last Name:</td>
+<td align="left"><input type="text" size="20" name="n2" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Address:</td>
+<td align="left"><textarea name="n3" size="20" rows="3" cols="22" onchange="f2()"></textarea></td>
+</tr>
+<tr>
+<td align="left">Gender:</td>
+<td align="left"><input type="radio" name="gender1" value="1">Male<input type="radio" name="gender1"  value="2">Female<input type="radio" name="gender1" value="3">Transgender</td>
+</tr>
+<tr>
+<td align="left">Aadhar No:</td>
+<td align="left"><input type="text" name="n4" size="20" onchange="f2()" ></td>
+</tr>
+<tr>
+<td align="left">Date of Birth:</td>
+<td align="left"><input type="text" name="n5" size="20" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Email ID:</td>
+<td align="left"><input type="text" name="n6" size="20" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Phone No:</td>
+<td align="left"><input type="text" name="n7" size="20" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Pan No:</td>
+<td align="left"><input type="text" name="n8" size="20" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">State:</td>
+<td align="left"><select name="n9">
+<option value=1>Maharashtra
+<option value=2>Goa
+<option value=3>Karnataka
+<option value=4>Uttar Pardesh
+<option value=5>Bihar</td>
+</tr>
+<tr>
+<td align="left">User ID:</td>
+<td align="left"><input type="text" name="n10" size="20" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Password:</td>
+<td align="left"><input type="password" name="n11" size="20" onchange="f2()"></td>
+</tr>
+<tr>
+<td align="left">Confirm Password:</td>
+<td align="left"><input type="password" name="n12" size="20" onchange="f2()"></td>
+</tr>
+
+
+<tr>
+<td>
+
+
+<input type="button"  name="sub" disabled=true   value="submit" onclick="valid1()" >
+<input type="reset" value="reset">
+</td>
+</tr>
+</table>
+<table bgcolor="black" width="100%" height="75px">
+ <tr>
+<td align="middle" valign="top" >
+&copy <i><b><FONT color="white">copyright,Center For Railway Information System,All Rights Are Reserved</FONT></b></i>
+
+
+
+</td>     
+</table>
+</FORM>
+
+
+</BODY>
+//onchange form event should be used at every textbox for checking and at submit button, onclick="valid1()" instead of valid1() there should be give the path of home page.
